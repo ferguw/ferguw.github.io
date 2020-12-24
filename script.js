@@ -119,4 +119,56 @@ keys.addEventListener('click', event => {
     }
 
     updateDisplay();
-});
+})
+
+//sin
+function sin(degrees) {
+    var radians = (degrees * Math.PI) / 180;
+    return Math.sin(radians);
+}
+const sinus = document.querySelector('#sin');
+
+sinus.addEventListener('click', function () {
+    const valueScreen = calculator.displayValue;
+    console.log(valueScreen);
+    const result = sin(valueScreen);
+
+    resetCalculator();
+    inputDigit(result.toFixed(2));
+
+    stopPropaganation();
+})
+
+//cos
+function cos(degrees) {
+    var radians = (degrees * Math.PI) / 180;
+    return Math.cos(radians);
+}
+const cosinus = document.querySelector('#cos');
+
+cosinus.addEventListener('click', function () {
+    const valueScreen = calculator.displayValue;
+    const result = cos(valueScreen);
+
+    resetCalculator();
+    inputDigit(result.toFixed(2));
+
+    stopPropaganation();
+})
+
+//tan
+function tan(degrees) {
+    var radians = (degrees * Math.PI) / 180;
+    return Math.tan(radians);
+}
+const tangen = document.querySelector('#tan');
+
+tangen.addEventListener('click', function () {
+    const valueScreen = calculator.displayValue;
+    const result = tan(valueScreen);
+
+    resetCalculator();
+    inputDigit(result.toFixed(2));
+
+    stopPropaganation();
+})
